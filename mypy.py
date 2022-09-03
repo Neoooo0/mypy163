@@ -5,10 +5,10 @@ import os
 import requests
 from requests import get, post
 
-api = "https://cake-glacier-zydeco.glitch.me"
-paassword = "aba6f9967f22cab536651a37ca1decc0"
-phone = "15106618912"  ###填手机号
-countrycode = 86  ###国家码 中国为86
+api = os.environ["API"]
+paassword = os.environ["PASSWORD"]
+phone = os.environ["PHONE"]  ###填手机号
+countrycode = 86
 
 
 class music163():
