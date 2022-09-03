@@ -148,4 +148,4 @@ def main(event, content):
 
 if __name__ == '__main__':
     music163(phone, paassword, api, countrycode).main()
-    music163.send_message()
+    music163(phone, paassword, api, countrycode).send_message()
