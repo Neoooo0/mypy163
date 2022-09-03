@@ -5,6 +5,8 @@ import json
 import requests
 from requests import get, post
 
+count = 99999
+
 api = os.environ["API"]
 paassword = os.environ["PASSWORD"]
 phone = os.environ["PHONE"]  ###填手机号
@@ -49,6 +51,8 @@ class music163():
 
     def task(self):
 
+        global count
+        
         url = self.api + "/personalized?limit=300"
         ##获取推荐歌单列表
 
@@ -80,9 +84,7 @@ class music163():
                     logging.info('刷到320首歌退出')
                     return count ##刷到320首歌退出
 
-    def main(self):
-            self.login()
-            self.task()
+
 
     def get_access_token(self):
             # appId
@@ -105,9 +107,7 @@ class music163():
     def send_message(self):
 
             accessToken = self.get_access_token()
-            result = self.task()
-
-            print(result)
+            result = count
 
             url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(accessToken)
 
@@ -142,10 +142,15 @@ class music163():
             else:
                 print(response)
 
+      def main(self):
+            self.login()
+            self.task()
+            self.send_message()
+      
 def main(event, content):
     music163(phone, paassword, api, countrycode).main()
 
 
 if __name__ == '__main__':
     music163(phone, paassword, api, countrycode).main()
-    music163(phone, paassword, api, countrycode).send_message()
+
