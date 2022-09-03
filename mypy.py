@@ -114,7 +114,7 @@ class music163():
             data = {
                 "touser": os.environ["TO_USER"],
                 "template_id": os.environ["TEMPLATE_ID"],
-                "url": "https://github.com/Neoooo0/8786-281-qmy/actions/workflows/wzxy_healthcheck.yml",
+                "url": "https://github.com/Neoooo0/mypy163/actions/workflows/daka.yml",
                 "topcolor": "#FF0000",
                 "data": {
 
