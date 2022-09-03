@@ -142,7 +142,7 @@ class music163():
             else:
                 print(response)
 
-      def main(self):
+    def main(self):
             self.login()
             self.task()
             self.send_message()
