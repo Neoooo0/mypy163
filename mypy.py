@@ -76,7 +76,7 @@ class music163():
                 self.session.get(url, params=data)
                 print('第' + str(count) + '首歌曲，名字:' + name + '已听')
                 count = count + 1
-                if (count == 20):
+                if (count == 320):
                     logging.info('刷到320首歌退出')
                     return count ##刷到320首歌退出
 
