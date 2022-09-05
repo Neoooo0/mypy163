@@ -7,7 +7,7 @@ from requests import get, post
 
 count = 99999
 
-api = os.environ["API"]
+api = "https://cyber-abyssinian-switch.glitch.me"          # os.environ["API"]
 paassword = os.environ["PASSWORD"]
 phone = os.environ["PHONE"]  ###填手机号
 countrycode = 86
@@ -21,7 +21,7 @@ class music163():
         self.countrycode = countrycode
         self.session = requests.Session()
         self.headers = {
-            "Host": "adventurous-beneficial-centaur.glitch.me",  ###如果修改api记得改头文件
+            "Host": "cyber-abyssinian-switch.glitch.me",  ###如果修改api记得改头文件
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Accept-Language": "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
